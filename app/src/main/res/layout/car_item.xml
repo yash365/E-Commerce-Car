@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewId"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:background="#A2F5D4"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="15dp"
+    card_view:cardCornerRadius="25dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -10,10 +16,10 @@
         android:layout_margin="7dp"
         >
 
-        <ImageView
-        android:id="@+id/carImageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+    <ImageView
+        android:id="@+id/carViewImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:padding="2dp" />
 
         <TextView
@@ -22,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/carImageView"
+            android:layout_toEndOf="@+id/carViewImage"
             android:text="Car Name"
             android:textColor="@android:color/black"
             android:textSize="20sp"
@@ -34,10 +40,67 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/carName"
             android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/carImageView"
+            android:layout_toEndOf="@+id/carViewImage"
             android:text="Car Price"
             android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
             android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carPrice"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/carViewImage"
+            android:text="Mumbai"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/kmUsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/carViewImage"
+            android:text="60000"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/sellerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kmUsed"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/carViewImage"
+            android:text="Sunil"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/modelYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sellerName"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/carViewImage"
+            android:text="Model Year"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            />
+
+
+
+
 
     </RelativeLayout>
 

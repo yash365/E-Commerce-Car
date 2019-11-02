@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/padding_left"
     android:paddingRight="@dimen/padding_right"
+    android:paddingTop="50dp"
     android:background="#fffdd0 "
     tools:context=".MainActivity">
 
@@ -22,7 +23,6 @@
         android:backgroundTint="@color/blackAccent"
         android:textSize="22sp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:textAlignment="center"
         android:inputType="textEmailAddress"
         />
