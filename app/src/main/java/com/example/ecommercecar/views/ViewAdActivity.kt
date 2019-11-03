@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 
 import com.example.ecommercecar.R
 import kotlinx.android.synthetic.main.activity_view_ad.*
@@ -34,6 +35,13 @@ class ViewAdActivity : AppCompatActivity() {
         kmUsed.setText("$kmUsedValue")
         sellerName.setText("Seller Name: $sellerNameValue")
         location.setText("City: $locationValue")
+
+        contactButton.setOnClickListener(View.OnClickListener {
+            val bottomSheet : ContactBottomSheetDialog = ContactBottomSheetDialog()
+            bottomSheet.show(supportFragmentManager, "contactBottomSheet")
+
+            Log.d(TAG, "onCreate contactButton listener")
+        })
 
         Log.d(TAG, "onCreate")
     }

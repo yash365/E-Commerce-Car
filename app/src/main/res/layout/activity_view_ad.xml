@@ -22,13 +22,14 @@
         android:id="@+id/carName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/carImage"
         android:text="Car name"
         android:textSize="22sp"
         android:textAllCaps="false"
         android:textColor="@color/blackAccent"
         android:textAlignment="center"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         />
 
@@ -36,7 +37,6 @@
         android:id="@+id/carPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/carName"
         android:text="Car Price"
         android:textSize="22sp"
@@ -44,13 +44,14 @@
         android:textColor="@color/blackAccent"
         android:textAlignment="center"
         android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
         />
 
     <TextView
         android:id="@+id/modelYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/carPrice"
         android:text="Model Year"
         android:textSize="22sp"
@@ -58,13 +59,14 @@
         android:textColor="@color/blackAccent"
         android:textAlignment="center"
         android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
         />
 
     <TextView
         android:id="@+id/kmUsed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/modelYear"
         android:text="km used"
         android:textSize="22sp"
@@ -72,13 +74,14 @@
         android:textColor="@color/blackAccent"
         android:textAlignment="center"
         android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
         />
 
     <TextView
         android:id="@+id/sellerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/kmUsed"
         android:text="Seller name"
         android:textSize="22sp"
@@ -86,13 +89,14 @@
         android:textColor="@color/blackAccent"
         android:textAlignment="center"
         android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
         />
 
     <TextView
         android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/sellerName"
         android:text="Mumbai"
         android:textSize="22sp"
@@ -100,6 +104,8 @@
         android:textColor="@color/blackAccent"
         android:textAlignment="center"
         android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
         />
 
     <Button
