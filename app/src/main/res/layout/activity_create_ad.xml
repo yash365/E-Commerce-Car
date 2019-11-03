@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".views.CreateAdActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnChoose"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Select or Capture Car Image"
+        android:textSize="20sp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textAllCaps="false"
+        android:background="@drawable/button_shape"
+        />
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/iv"
+        android:layout_below="@+id/btnChoose"
+        android:layout_centerHorizontal="true"
+        />
+
+        <TextView
+            android:id="@+id/carNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Name: "
+            android:textSize="24sp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/blackAccent"
+            android:layout_below="@+id/iv"
+            />
+
+        <EditText
+            android:id="@+id/carNameTextValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackAccent"
+            android:gravity="start"
+            android:hint="Enter the car name"
+            android:textSize="24sp"
+            android:textColor="@color/blackAccent"
+            android:layout_toEndOf="@+id/carNameText"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/iv"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/carPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Price: "
+            android:textSize="24sp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/blackAccent"
+            android:layout_below="@+id/carNameText"
+            />
+
+        <EditText
+            android:id="@+id/carPriceTextValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackAccent"
+            android:gravity="start"
+            android:hint="Enter the car price"
+            android:textSize="24sp"
+            android:textColor="@color/blackAccent"
+            android:layout_toEndOf="@+id/carPriceText"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/carNameText"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/carModelYearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Model Year: "
+            android:textSize="24sp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/blackAccent"
+            android:layout_below="@+id/carPriceText"
+            />
+
+        <EditText
+            android:id="@+id/carModelYearTextValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackAccent"
+            android:gravity="start"
+            android:hint="Enter the model year"
+            android:textSize="24sp"
+            android:textColor="@color/blackAccent"
+            android:layout_toEndOf="@+id/carModelYearText"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/carPriceText"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/carKmUsedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car km Used: "
+            android:textSize="24sp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/blackAccent"
+            android:layout_below="@+id/carModelYearText"
+            />
+
+        <EditText
+            android:id="@+id/carKmUsedTextValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackAccent"
+            android:gravity="start"
+            android:hint="Enter the km used"
+            android:textSize="24sp"
+            android:textColor="@color/blackAccent"
+            android:layout_toEndOf="@+id/carKmUsedText"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/carModelYearText"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/carSellerNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seller Name: "
+            android:textSize="24sp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/blackAccent"
+            android:layout_below="@+id/carKmUsedText"
+            />
+
+        <EditText
+            android:id="@+id/carSellerNameTextValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackAccent"
+            android:gravity="start"
+            android:hint="Enter the seller name"
+            android:textSize="24sp"
+            android:textColor="@color/blackAccent"
+            android:layout_toEndOf="@+id/carSellerNameText"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/carKmUsedText"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/carCityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Location: "
+            android:textSize="24sp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/blackAccent"
+            android:layout_below="@+id/carSellerNameText"
+            />
+
+        <EditText
+            android:id="@+id/carCityTextValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackAccent"
+            android:gravity="start"
+            android:hint="Enter the car location"
+            android:textSize="24sp"
+            android:textColor="@color/blackAccent"
+            android:layout_toEndOf="@+id/carCityText"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/carSellerNameText"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:background="@drawable/button_shape"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/carCityTextValue"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            />
+
+</RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>

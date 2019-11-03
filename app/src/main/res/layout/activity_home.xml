@@ -16,4 +16,14 @@
         android:scrollbars="vertical"
         />
 
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/add_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:contentDescription="add-button" />
+
 </RelativeLayout>

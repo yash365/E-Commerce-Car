@@ -2,6 +2,9 @@ package com.example.ecommercecar.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +16,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ecommercecar.R;
+import com.example.ecommercecar.database.CarContract;
 import com.example.ecommercecar.model.CarItem;
 import com.example.ecommercecar.views.ViewAdActivity;
 
@@ -23,6 +27,7 @@ import java.util.ArrayList;
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
     private ArrayList<CarItem> mCarList;
     private Context mContext;
+    //private Cursor mCursor;
 
 
     public static class CarViewHolder extends RecyclerView.ViewHolder {
@@ -51,6 +56,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
     public CarAdapter(Context context, ArrayList<CarItem> carList){
         mCarList = carList;
         mContext = context;
+        //mCursor = cursor;
+
     }
 
     @NotNull
@@ -64,6 +71,33 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull CarViewHolder holder, int position) {
         final CarItem currentItem = mCarList.get(position);
+
+//        if(!mCursor.moveToPosition(position)){
+//            return;
+//        }
+
+//        // getting data from database
+//        byte[] imageArray = mCursor.getBlob(mCursor.getColumnIndex(CarContract.CarEntry.COLUMN_CAR_IMAGE));
+//        String carName = mCursor.getString(mCursor.getColumnIndex(CarContract.CarEntry.COLUMN_CAR_NAME));
+//        String carPrice = mCursor.getString(mCursor.getColumnIndex(CarContract.CarEntry.COLUMN_PRICE));
+//        String modelYear = mCursor.getString(mCursor.getColumnIndex(CarContract.CarEntry.COLUMN_MODEL_YEAR));
+//        String kmUsed = mCursor.getString(mCursor.getColumnIndex(CarContract.CarEntry.COLUMN_KM_USED));
+//        String sellerNamed = mCursor.getString(mCursor.getColumnIndex(CarContract.CarEntry.COLUMN_SELLER_NAME));
+//        String location = mCursor.getString(mCursor.getColumnIndex(CarContract.CarEntry.COLUMN_LOCATION));
+//        String empty = "";
+//
+//        if( imageArray !=null || carName!=null || carPrice!=null || modelYear!=null || kmUsed!= null || sellerNamed!=null || location!=null
+//        ){
+//            Bitmap bmp= BitmapFactory.decodeByteArray(imageArray,0,imageArray.length);
+//            holder.mImageView.setImageBitmap(bmp);
+//            holder.mTextViewCarName.setText(carName);
+//            holder.mTextViewCarPrice.setText(carPrice);
+//            holder.mTextViewLocation.setText(location);
+//            holder.mTextViewKmUsed.setText(kmUsed);
+//            holder.mTextViewSellerName.setText(sellerNamed);
+//            holder.mModelYear.setText(modelYear);
+//        }
+
 
         holder.mImageView.setImageResource(currentItem.getmCarImage()); // image
         holder.mTextViewCarName.setText(currentItem.getmCarName());  // car name
@@ -96,5 +130,19 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
     public int getItemCount() {
         return mCarList.size();
     }
+
+//    public void swapCursor(Cursor newCursor) {
+//        if (mCursor != null) {
+//            mCursor.close();
+//        }
+//
+//        mCursor = newCursor;
+//
+//        if (newCursor != null) {
+//            notifyDataSetChanged();
+//        }
+//    }
+
+
 
 }
